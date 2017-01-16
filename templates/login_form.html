@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+<!-- {% block head_title %}{{ instance.title }} | {{ block.super }}{% endblock head_title %} -->
+
+{% block content %}
+    <h3>Form</h3>
+    <form method="POST" action="">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Create Profile" />
+    </form>
+{% endblock content %}
